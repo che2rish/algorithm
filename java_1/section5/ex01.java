@@ -5,7 +5,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 // 올바른 괄호 - 괄호가 입력되면 올바른 괄호이면 "YES",올바르지 않으면 "NO" 출력
-// 에러남
+
 public class ex01 {
     public static void main(String[] args)  {
        Scanner sc = new Scanner(System.in);
