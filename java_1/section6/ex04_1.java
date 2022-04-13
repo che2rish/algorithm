@@ -1,0 +1,36 @@
+package section6;
+
+import java.util.Scanner;
+
+public class ex04_1 {
+    public int[] solution(int size, int n, int[] arr){
+        int[] cache = new int[size];
+        for(int x : arr){
+            int pos = -1;
+            for(int i = 0; i < size; i++) if(x ==cache[i]) pos = i; // Cache Hit 상황이라면 pos의 값 변경
+            if(pos == -1){ // Cache Miss 상황
+                for(int i = size-1; i >= 1; i--){
+                    cache[i] = cache[i-1];
+                }
+            }
+            else{
+                for(int i = pos; i >= 1; i--){
+                    cache[i] = cache[i-1];
+                }
+            }
+            cache[0] = x;
+        }
+
+        return cache;
+    }
+
+    public static void main(String[] args){
+        ex04_1 T = new ex04_1();
+        Scanner kb = new Scanner(System.in);
+        int s = kb.nextInt();
+        int n = kb.nextInt();
+        int[] arr = new int[n];
+        for(int i = 0; i <n; i++) arr[i] = kb.nextInt();
+        for(int x : T.solution(s,n,arr)) System.out.print(x + " ");
+    }
+}
