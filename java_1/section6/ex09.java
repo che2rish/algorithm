@@ -2,8 +2,7 @@ package section6;
 
 import java.util.Scanner;
 
-// 뮤직비디오 (결정알고리즘) - DVD의 크기를 최소로 하고, M개의 DVD는 모두 같은 크기로
-// DVD의 최소 용량 크기를 출력
+// 뮤직비디오 (결정알고리즘) - DVD의 크기를 최소로 하고, M개의 DVD는 모두 같은 크기로 DVD의 최소 용량 크기를 출력
 public class ex09 {
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
